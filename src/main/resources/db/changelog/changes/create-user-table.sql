@@ -1,6 +1,6 @@
 CREATE TABLE `user` (
                         `id` bigint NOT NULL,
-                        `block` int DEFAULT NULL,
+                        `block` INT DEFAULT NULL,
                         `create_date` date DEFAULT NULL,
                         `email` varchar(255) DEFAULT NULL,
                         `name` varchar(255) DEFAULT NULL,

@@ -1,5 +1,19 @@
 databaseChangeLog:
   - include:
+      file: db/changelog/changes/create-answer_seq-table.sql
+  - include:
+      file: db/changelog/changes/create-question_seq-table.sql
+  - include:
+      file: db/changelog/changes/create-quiz_seq-table.sql
+  - include:
+      file: db/changelog/changes/create-result_seq-table.sql
+  - include:
+      file: db/changelog/changes/create-role_seq-table.sql
+  - include:
+      file: db/changelog/changes/create-topic_seq-table.sql
+  - include:
+      file: db/changelog/changes/create-user_seq-table.sql
+  - include:
       file: db/changelog/changes/create-role-table.sql
   - include:
       file: db/changelog/changes/create-user-table.sql

@@ -1,7 +1,7 @@
 CREATE TABLE `result` (
                           `id` bigint NOT NULL,
                           `passed_date` datetime(6) DEFAULT NULL,
-                          `score` int DEFAULT NULL,
+                          `score` INT DEFAULT NULL,
                           `user_id` bigint NOT NULL,
                           `quiz_id` bigint NOT NULL DEFAULT '0',
                           PRIMARY KEY (`id`),

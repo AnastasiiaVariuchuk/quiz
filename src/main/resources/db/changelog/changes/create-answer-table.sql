@@ -1,6 +1,6 @@
 CREATE TABLE `answer` (
                           `id` bigint NOT NULL,
-                          `answer` int DEFAULT NULL,
+                          `answer` INT DEFAULT NULL,
                           `description` varchar(255) DEFAULT NULL,
                           `question_id` bigint NOT NULL,
                           PRIMARY KEY (`id`),
