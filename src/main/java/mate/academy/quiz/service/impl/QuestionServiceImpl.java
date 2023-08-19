@@ -26,7 +26,7 @@ public class QuestionServiceImpl implements QuestionService {
 
     @Override
     public List<Question> getAllQuizQuestions(Long id) {
-        return questionRepository.getAllQuizQuestions(id);
+        return questionRepository.findAllByQuizId(id);
     }
 
     @Transactional
@@ -44,7 +44,7 @@ public class QuestionServiceImpl implements QuestionService {
 
     @Override
     public boolean isCorrect(List<Integer> answersList, Long quizId, int questionId) {
-        List<Answer> correctAnswers = questionRepository.getAllQuizQuestions(quizId).get(questionId).getAnswers();
+        List<Answer> correctAnswers = questionRepository.findAllByQuizId(quizId).get(questionId).getAnswers();
         return IntStream.range(0, correctAnswers.size())
                 .allMatch(i -> {
                     int answer = correctAnswers.get(i).getAnswer();

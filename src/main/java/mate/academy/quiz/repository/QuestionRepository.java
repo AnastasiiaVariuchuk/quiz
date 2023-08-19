@@ -9,10 +9,10 @@ import org.springframework.data.repository.query.Param;
 import java.util.List;
 
 public interface QuestionRepository extends CrudRepository<Question, Long> {
-    @Query("SELECT q From Question q where q.quiz.id = :id")
-    List<Question> getAllQuizQuestions(@Param("id") Long id);
+    @Query("SELECT q FROM Question q WHERE q.quiz.id = :id")
+    List<Question> findAllByQuizId(@Param("id") Long id);
 
     @Modifying
-    @Query(nativeQuery = true, value = "delete from `spring-quiz`.question where quiz_id=:id")
+    @Query(nativeQuery = true, value = "DELETE FROM `spring-quiz`.question WHERE quiz_id = :id")
     void deleteQuestionsByQuizId(@Param("id") long id);
 }

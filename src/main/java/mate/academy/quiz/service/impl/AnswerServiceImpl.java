@@ -22,7 +22,7 @@ public class AnswerServiceImpl implements AnswerService {
 
     @Override
     public List<Answer> getAllAnswersByQuestionId(Long id) {
-        return answerRepository.findAllById(id);
+        return answerRepository.findAllByQuestionId(id);
     }
 
     @Override

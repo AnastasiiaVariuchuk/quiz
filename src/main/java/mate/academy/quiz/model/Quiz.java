@@ -27,30 +27,28 @@ public class Quiz implements Serializable {
     @GeneratedValue
     @Column(name = "id")
     private Long id;
-
     @Column(name = "header")
     private String header;
-
     @Column(name = "description")
     private String description;
     @ManyToOne
     @JoinColumn(name = "topic_id")
     private Topic topic;
-
     @OneToMany(cascade = CascadeType.ALL)
     @JoinColumn(name = "quiz_id")
     @ToString.Exclude
     private List<Question> questions = new ArrayList<>();
 
-    public void addQuestion(Question question) {
-        questions.add(question);
-        question.setQuiz(this);
-    }
-
-    public void removeQuestion(Question question) {
-        questions.remove(question);
-        question.setQuiz(null);
-    }
+    //TODO implement such methods in QuizService or QuestionService
+//    public void addQuestion(Question question) {
+//        questions.add(question);
+//        question.setQuiz(this);
+//    }
+//
+//    public void removeQuestion(Question question) {
+//        questions.remove(question);
+//        question.setQuiz(null);
+//    }
 
     @Column(name = "create_date")
     private Date createDate;
