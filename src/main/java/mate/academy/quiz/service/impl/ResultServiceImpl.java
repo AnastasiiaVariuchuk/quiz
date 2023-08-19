@@ -4,7 +4,6 @@ import lombok.AllArgsConstructor;
 import mate.academy.quiz.model.Result;
 import mate.academy.quiz.repository.ResultRepository;
 import mate.academy.quiz.service.ResultService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
