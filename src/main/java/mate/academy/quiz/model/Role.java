@@ -28,6 +28,7 @@ public class Role {
     public Role() {
     }
 
+    //TODO update ENUM and remake DB according to this
     public enum RoleEnum{
         USER("USER",2L),ADMIN("ADMIN",1L);
         RoleEnum(String name, Long id){

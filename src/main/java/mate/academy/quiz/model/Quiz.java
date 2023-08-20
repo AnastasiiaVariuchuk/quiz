@@ -38,6 +38,15 @@ public class Quiz implements Serializable {
     @JoinColumn(name = "quiz_id")
     @ToString.Exclude
     private List<Question> questions = new ArrayList<>();
+    @Column(name = "create_date")
+    private Date createDate;
+    @Column(name = "duration")
+    private int duration;
+    @Column(name = "difficult")
+    @Enumerated(EnumType.STRING)
+    private DIFFICULT difficult;
+    @Column(name = "archived")
+    private Integer archived;
 
     //TODO implement such methods in QuizService or QuestionService
 //    public void addQuestion(Question question) {
@@ -49,16 +58,6 @@ public class Quiz implements Serializable {
 //        questions.remove(question);
 //        question.setQuiz(null);
 //    }
-
-    @Column(name = "create_date")
-    private Date createDate;
-    @Column(name = "duration")
-    private int duration;
-    @Column(name = "difficult")
-    @Enumerated(EnumType.STRING)
-    private DIFFICULT difficult;
-    @Column(name = "archived")
-    private Integer archived;
 
     @Override
     public boolean equals(Object o) {
